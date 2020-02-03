@@ -28,6 +28,26 @@ module.exports = {
       {
         test: /\.css$/,
         use: [{ loader: "style-loader" }, { loader: "css-loader" }]
+      },
+      {
+        test: /\.(woff(2)?|tff|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/"
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader"
+          }
+        ]
       }
     ]
   }
