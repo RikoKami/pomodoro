@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/",
+		"strict": true,
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"target": "es5",
+		"jsx": "react",
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": "src",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"paths": {
+			"@components/*": ["components/", "components/*"],
+			"@containers/*": ["containers/", "containers/*"],
+			"@generated/*": ["generated/", "generated/*"],
+			"@helpers/*": ["helpers/", "helpers/*"],
+			"@assets/*": ["assets/", "assets/*"],
+			"@vendor/*": ["vendor/", "vendor/*"],
+			"@hooks/*": ["hooks/", "hooks/*"],
+			"@hocs/*": ["hocs/", "hocs/*"]
+		}
+	},
+	"include": ["./src/**/*"]
+}

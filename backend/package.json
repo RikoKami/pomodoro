@@ -1,21 +1,26 @@
 {
-  "name": "pomodoro",
-  "author": {
-    "name": "Larissa Dantas",
-    "url": "https://github.com/RikoKami"
-  },
-  "scripts": {
-    "dev": "nodemon src/index.js"
-  },
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.8.9"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  }
+	"name": "pomodoro",
+	"author": {
+		"name": "Larissa Dantas",
+		"url": "https://github.com/RikoKami"
+	},
+	"scripts": {
+		"dev": "nodemon src/index.ts",
+		"check-prettier": "prettier --list-different {src,spec}/*.{ts,tsx} {src,spec}/**/*.{ts,tsx} {src,spec}/**/**/*.{ts,tsx} {src,spec}/**/**/**/*.{ts,tsx}",
+		"fix-prettier": "prettier --write {src,spec}/*.{ts,tsx} {src,spec}/**/*.{ts,tsx} {src,spec}/**/**/*.{ts,tsx} {src,spec}/**/**/**/*.{ts,tsx}"
+	},
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"dependencies": {
+		"@types/express": "^4.17.2",
+		"@types/node": "^13.7.0",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"mongoose": "^5.8.9"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.2",
+		"prettier": "^1.19.1"
+	}
 }
