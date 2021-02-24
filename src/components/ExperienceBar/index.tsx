@@ -5,11 +5,11 @@ export const ExperienceBar = () => {
     return (
         <div className={s.experienceBar}>
             <span>0 xp</span>
-            <div>
+            <div className={s.current}>
                 <div style={{ width: '50%'}} />
-            </div>
-            <div className={s.currentExp}>
-                300px
+                <span className={s.currentExp} style={{left: "50%"}}>
+                    300px
+                </span>
             </div>
             <span>600px</span>
         </div>

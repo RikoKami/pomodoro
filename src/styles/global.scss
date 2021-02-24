@@ -1,5 +1,23 @@
+@import "../styles/variables";
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: nth($neutral,5);
+    font-family: "Inter", sans-serif;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
 }

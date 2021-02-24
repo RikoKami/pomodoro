@@ -3,14 +3,28 @@
 .experienceBar {
     display: flex;
     align-items: center;
+
     span {
         font-size: 1rem;
+        &.currentExp {
+            position: absolute;
+            top: 12px;
+            transform: translateX(-50%);
+        }
     }
 
-    > div {
+    .current {
         flex:1;
         height: 4px;
         border-radius: 4px;
-        background-color: nth($green, 2);
+        background-color: nth($neutral, 2);
+        margin: 0 1.5rem;
+        position: relative;
+
+        > div{
+            height: 4px;
+            border-radius: 4px;
+            background-color: nth($green, 1);
+        }
     }
 }
