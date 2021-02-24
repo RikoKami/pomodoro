@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss" ;
+
 .experienceBar {
     display: flex;
     align-items: center;
@@ -8,5 +10,7 @@
     > div {
         flex:1;
         height: 4px;
+        border-radius: 4px;
+        background-color: nth($green, 2);
     }
 }
