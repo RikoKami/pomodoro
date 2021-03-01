@@ -1,30 +1,30 @@
-@import "../../styles/variables.scss" ;
+@import "../../styles/variables.scss";
 
 .experienceBar {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 
-    span {
-        font-size: 1rem;
-        &.currentExp {
-            position: absolute;
-            top: 12px;
-            transform: translateX(-50%);
-        }
-    }
+	span {
+		font-size: 1rem;
+		&.currentExp {
+			position: absolute;
+			top: 12px;
+			transform: translateX(-50%);
+		}
+	}
 
-    .current {
-        flex:1;
-        height: 4px;
-        border-radius: 4px;
-        background-color: nth($neutral, 2);
-        margin: 0 1.5rem;
-        position: relative;
+	.current {
+		flex: 1;
+		height: 4px;
+		border-radius: 4px;
+		background-color: nth($neutral, 2);
+		margin: 0 1.5rem;
+		position: relative;
 
-        > div{
-            height: 4px;
-            border-radius: 4px;
-            background-color: nth($green, 1);
-        }
-    }
+		> div {
+			height: 4px;
+			border-radius: 4px;
+			background-color: nth($green, 1);
+		}
+	}
 }
