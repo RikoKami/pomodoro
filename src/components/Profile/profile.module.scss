@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.profile {
+	margin: 0;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 1.5rem;
+	align-items: center;
+	picture {
+		img {
+			width: 5.5rem;
+			border-radius: 50%;
+		}
+	}
+	figcaption {
+		strong {
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: nth($neutral, 3);
+		}
+		.level {
+			margin-top: 0.5rem;
+			.iconLevelUp {
+				margin-right: 0.5rem;
+			}
+			span {
+				font-size: 1rem;
+				color: nth($neutral, 3);
+			}
+		}
+	}
+}
