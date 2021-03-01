@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+
+.completedChallenges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid nth($neutral, 2);
+  font-weight: 500;
+  span {
+    color: nth($neutral, 2);
+    &:first-child {
+      font-size: 1.25rem;
+    }
+    &:last-child {
+      font-size: 1.5rem;
+    }
+  }
+}
