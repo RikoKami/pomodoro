@@ -1,4 +1,3 @@
-import React from "react";
 import { LevelUp } from "../../assets/levelup";
 import s from "./profile.module.scss";
 

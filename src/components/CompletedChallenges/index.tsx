@@ -1,4 +1,3 @@
-import React from 'react';
 import s from "./completedChallenges.module.scss";
 
 export const CompletedChallenges = () => {
