@@ -32,3 +32,22 @@
     font-size: 6.25rem;
   }
 }
+
+.countdownBtn {
+  width: 100%;
+  height: 5rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 5px;
+  background-color: nth($blue, 3);
+  color: nth($neutral, 1);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: background-color .2s;
+  &:hover{
+    background-color: nth($blue, 4);
+  }
+}
