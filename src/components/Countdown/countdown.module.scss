@@ -47,7 +47,23 @@
   font-size: 1.25rem;
   font-weight: 600;
   transition: background-color .2s;
-  &:hover{
-    background-color: nth($blue, 4);
+  outline: none;
+  &:not(:disabled){
+    &:hover{
+      background-color: nth($blue, 4);
+    }
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #1c1c23;
+    color: nth($neutral, 3);
+  }
+  &.active {
+    background-color: nth($neutral, 2);
+    color: nth($neutral, 5);
+    &:hover{
+      background-color: nth($red, 1);
+      color: nth($neutral, 2);
+    }
   }
 }
