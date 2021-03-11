@@ -27,8 +27,11 @@
     display: flex;
     align-items: center;
     column-gap: 24px;
+    flex-direction: column;
     p {
       color: nth($neutral, 3);
+      line-height: 1.4;
+      margin-top: 1.5rem;
     }
     .icon {
       position: relative;
