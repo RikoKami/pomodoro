@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BodyIcon } from "../../assets/bodyIcon";
 import { LevelUp } from "../../assets/levelup";
 import s from "./challengeBox.module.scss";
 
@@ -11,6 +12,7 @@ export const ChallengeBox = () => {
         <div className={s.active}>
           <header>Ganhe 400 xp</header>
           <main>
+            <BodyIcon />
             <strong>Novo Desafio</strong>
             <p>Levante e faça uma caminhada de 3 minutos.</p>
           </main>
