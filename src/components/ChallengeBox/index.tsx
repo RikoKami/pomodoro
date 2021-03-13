@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { BodyIcon } from "../../assets/bodyIcon";
 import { LevelUp } from "../../assets/levelup";
+import { ChallengesContext } from "../../hooks/ChallengesContext";
 import s from "./challengeBox.module.scss";
 
 export const ChallengeBox = () => {
+  const contextData = useContext(ChallengesContext);
+
+  console.log(contextData)
   const [hasActiveChallenge, setHasActiveChallenge] = useState(true);
   
   return (
