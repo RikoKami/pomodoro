@@ -1,11 +1,12 @@
 import "../styles/global.scss";
-import { ChallengesContext } from '../hooks/ChallengesContext';
+import { ChallengesProvider } from '../hooks/ChallengesContext';
+import React from "react";
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<ChallengesContext.Provider value={'todo'}>
+		<ChallengesProvider>
 			<Component {...pageProps} />
-		</ChallengesContext.Provider>
+		</ChallengesProvider>
 	);
 }
 
