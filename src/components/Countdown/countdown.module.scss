@@ -1,69 +1,69 @@
 @import "../../styles/variables";
 
 .countdown {
-  display: flex;
-  align-items: center; 
-  font-weight: 600;
-  color: nth($neutral,3);
-  > div {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #1c1c23;
-    box-shadow: 0 0 60px rgba(0,0,0,0.05);
-    border-radius: 5px;
-    font-size: 8.5rem;
-    text-align: center;
-    span {
-      flex: 1;
-      font-family: "Rajdhani",sans-serif;
-      &:first-child {
-        border-right: 1px solid nth($neutral, 4);
-      }
-      &:last-child {
-        border-left: 1px solid nth($neutral, 4);
-      }
-    }
-  }
-  > span {
-    font-family: "Rajdhani",sans-serif;
-    color: nth($neutral,3);
-    font-size: 6.25rem;
-  }
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	color: nth($neutral, 3);
+	> div {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		background-color: #1c1c23;
+		box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+		border-radius: 5px;
+		font-size: 8.5rem;
+		text-align: center;
+		span {
+			flex: 1;
+			font-family: "Rajdhani", sans-serif;
+			&:first-child {
+				border-right: 1px solid nth($neutral, 4);
+			}
+			&:last-child {
+				border-left: 1px solid nth($neutral, 4);
+			}
+		}
+	}
+	> span {
+		font-family: "Rajdhani", sans-serif;
+		color: nth($neutral, 3);
+		font-size: 6.25rem;
+	}
 }
 
 .countdownBtn {
-  width: 100%;
-  height: 5rem;
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  border-radius: 5px;
-  background-color: nth($blue, 3);
-  color: nth($neutral, 1);
-  font-size: 1.25rem;
-  font-weight: 600;
-  transition: background-color .2s;
-  outline: none;
-  &:not(:disabled){
-    &:hover{
-      background-color: nth($blue, 4);
-    }
-  }
-  &:disabled {
-    cursor: not-allowed;
-    background-color: #1c1c23;
-    color: nth($neutral, 3);
-  }
-  &.active {
-    background-color: nth($neutral, 2);
-    color: nth($neutral, 5);
-    &:hover{
-      background-color: nth($red, 1);
-      color: nth($neutral, 2);
-    }
-  }
+	width: 100%;
+	height: 5rem;
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	border-radius: 5px;
+	background-color: nth($blue, 3);
+	color: nth($neutral, 1);
+	font-size: 1.25rem;
+	font-weight: 600;
+	transition: background-color 0.2s;
+	outline: none;
+	&:not(:disabled) {
+		&:hover {
+			background-color: nth($blue, 4);
+		}
+	}
+	&:disabled {
+		cursor: not-allowed;
+		background-color: #1c1c23;
+		color: nth($neutral, 3);
+	}
+	&.active {
+		background-color: nth($neutral, 2);
+		color: nth($neutral, 5);
+		&:hover {
+			background-color: nth($red, 1);
+			color: nth($neutral, 2);
+		}
+	}
 }
