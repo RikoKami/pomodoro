@@ -5,20 +5,17 @@ import { ChallengesContext } from "../../hooks/ChallengesContext";
 import s from "./challengeBox.module.scss";
 
 export const ChallengeBox = () => {
-  const contextData = useContext(ChallengesContext);
-
-  console.log(contextData)
-  const [hasActiveChallenge, setHasActiveChallenge] = useState(true);
+  const { activeChallenge } = useContext(ChallengesContext);
   
   return (
     <div className={s.challengeBox}>
-      {hasActiveChallenge ? (
+      {activeChallenge ? (
         <div className={s.active}>
-          <header>Ganhe 400 xp</header>
+          <header>Ganhe {activeChallenge.amount} xp</header>
           <main>
-            <BodyIcon />
+            {activeChallenge.type === "body" ? <BodyIcon /> : "todo icon eye"}
             <strong>Novo Desafio</strong>
-            <p>Levante e faça uma caminhada de 3 minutos.</p>
+            <p>{activeChallenge.description}</p>
           </main>
           <footer>
             <button type="button" className={s.failButton}>Falhei</button>
