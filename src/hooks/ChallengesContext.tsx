@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useState } from 'react';
+import challenges from "../../challenges.json";
 
 interface ChallengesProviderProps {
   children: ReactNode;
