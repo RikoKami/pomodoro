@@ -1,5 +1,6 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { BodyIcon } from "../../assets/bodyIcon";
+import { EyeIcon } from "../../assets/eyeIcon";
 import { LevelUp } from "../../assets/levelup";
 import { ChallengesContext } from "../../hooks/ChallengesContext";
 import s from "./challengeBox.module.scss";
@@ -13,7 +14,7 @@ export const ChallengeBox = () => {
         <div className={s.active}>
           <header>Ganhe {activeChallenge.amount} xp</header>
           <main>
-            {activeChallenge.type === "body" ? <BodyIcon /> : "todo icon eye"}
+            {activeChallenge.type === "body" ? <BodyIcon /> : <EyeIcon />}
             <strong>Novo Desafio</strong>
             <p>{activeChallenge.description}</p>
           </main>
