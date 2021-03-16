@@ -6,7 +6,7 @@ import { ChallengesContext } from "../../hooks/ChallengesContext";
 import s from "./challengeBox.module.scss";
 
 export const ChallengeBox = () => {
-	const { activeChallenge } = useContext(ChallengesContext);
+	const { activeChallenge, resetChallenge } = useContext(ChallengesContext);
 
 	return (
 		<div className={s.challengeBox}>
@@ -19,7 +19,7 @@ export const ChallengeBox = () => {
 						<p>{activeChallenge.description}</p>
 					</main>
 					<footer>
-						<button type="button" className={s.failButton}>
+						<button type="button" className={s.failButton} onClick={resetChallenge}>
 							Falhei
 						</button>
 						<button type="button" className={s.succeededButton}>
