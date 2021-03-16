@@ -33,7 +33,7 @@ export const ChallengesProvider = ({ children }: ChallengesProviderProps) => {
 	// potencia de 2
 	// 4 de fator de exp
 	const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
-	
+
 	const levelUp = () => setLevel(level + 1);
 
 	const startNewChallenge = () => {
@@ -43,8 +43,8 @@ export const ChallengesProvider = ({ children }: ChallengesProviderProps) => {
 	};
 
 	const resetChallenge = () => {
-		setActiveChallenge(null)
-	}
+		setActiveChallenge(null);
+	};
 
 	return (
 		<ChallengesContext.Provider

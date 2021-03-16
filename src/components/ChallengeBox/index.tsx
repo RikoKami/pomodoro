@@ -19,7 +19,11 @@ export const ChallengeBox = () => {
 						<p>{activeChallenge.description}</p>
 					</main>
 					<footer>
-						<button type="button" className={s.failButton} onClick={resetChallenge}>
+						<button
+							type="button"
+							className={s.failButton}
+							onClick={resetChallenge}
+						>
 							Falhei
 						</button>
 						<button type="button" className={s.succeededButton}>
