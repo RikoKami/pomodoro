@@ -6,6 +6,7 @@
 
 	span {
 		font-size: 1rem;
+		color: nth($neutral,2);
 		&.currentExp {
 			position: absolute;
 			top: 12px;
