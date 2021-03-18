@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { LevelUp } from "../../assets/levelup";
+import { ChallengesContext } from "../../hooks/ChallengesContext";
 import s from "./profile.module.scss";
 
 export const Profile = () => {
+	const { level } = useContext(ChallengesContext);
+
 	return (
 		<figure className={s.profile}>
 			<picture>
@@ -12,7 +16,7 @@ export const Profile = () => {
 
 				<div className={s.level}>
 					<LevelUp className={s.iconLevelUp} />
-					<span> Level 1</span>
+					<span>Level {level}</span>
 				</div>
 			</figcaption>
 		</figure>
