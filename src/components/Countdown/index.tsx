@@ -7,7 +7,8 @@ export const Countdown = () => {
 		minutes,
 		seconds,
 		hasFinished,
-		handleCountdown,
+		startCountdown,
+		resetCountdown,
 		isActive,
 	} = useContext(CountdownContext);
 	const [minuteLeft, minuteRight] = String(minutes).padStart(2, "0").split("");
@@ -32,7 +33,7 @@ export const Countdown = () => {
 				type="button"
 				disabled={hasFinished}
 				className={`${s.countdownBtn} ${isActive ? s.active : ""}`}
-				onClick={handleCountdown}
+				onClick={isActive ? resetCountdown : startCountdown}
 			>
 				{isActive
 					? "Abandonar ciclo"

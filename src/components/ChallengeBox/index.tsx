@@ -3,12 +3,24 @@ import { BodyIcon } from "../../assets/bodyIcon";
 import { EyeIcon } from "../../assets/eyeIcon";
 import { LevelUp } from "../../assets/levelup";
 import { ChallengesContext } from "../../hooks/ChallengesContext";
+import { CountdownContext } from "../../hooks/CountdownContext";
 import s from "./challengeBox.module.scss";
 
 export const ChallengeBox = () => {
 	const { activeChallenge, resetChallenge, completeChallenge } = useContext(
 		ChallengesContext
 	);
+
+	const { resetCountdown } = useContext(CountdownContext);
+
+	const handleChallenge = (hasCompleted: boolean) => {
+		resetCountdown();
+		if (hasCompleted) {
+			completeChallenge();
+		} else {
+			resetChallenge();
+		}
+	};
 
 	return (
 		<div className={s.challengeBox}>
@@ -24,14 +36,14 @@ export const ChallengeBox = () => {
 						<button
 							type="button"
 							className={s.failButton}
-							onClick={resetChallenge}
+							onClick={() => handleChallenge(false)}
 						>
 							Falhei
 						</button>
 						<button
 							type="button"
 							className={s.succeededButton}
-							onClick={completeChallenge}
+							onClick={() => handleChallenge(true)}
 						>
 							Completei
 						</button>
