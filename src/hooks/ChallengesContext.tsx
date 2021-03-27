@@ -1,8 +1,9 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import challenges from "../../challenges.json";
 import Cookies from "js-cookie";
+import { HomeProps } from "../pages";
 
-interface ChallengesProviderProps {
+interface ChallengesProviderProps extends HomeProps {
 	children: ReactNode;
 }
 
@@ -25,10 +26,17 @@ interface ChallengesContextDate {
 
 export const ChallengesContext = createContext({} as ChallengesContextDate);
 
-export const ChallengesProvider = ({ children }: ChallengesProviderProps) => {
-	const [level, setLevel] = useState(1);
-	const [currentExperience, setCurrentExperience] = useState(0);
-	const [challengesCompleted, setChallengesCompleted] = useState(0);
+export const ChallengesProvider = ({
+	children,
+	...rest
+}: ChallengesProviderProps) => {
+	const [level, setLevel] = useState(rest.level ?? 1);
+	const [currentExperience, setCurrentExperience] = useState(
+		rest.currentExperience ?? 0
+	);
+	const [challengesCompleted, setChallengesCompleted] = useState(
+		rest.challengesCompleted ?? 0
+	);
 
 	const [activeChallenge, setActiveChallenge] = useState(null);
 
