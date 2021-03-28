@@ -4,7 +4,7 @@ import { ChallengesContext } from "../../hooks/ChallengesContext";
 import s from "./levelUp.module.scss";
 
 export const LevelUpModal = () => {
-	const { level } = useContext(ChallengesContext);
+	const { level, closeModalLevelUp } = useContext(ChallengesContext);
 
 	return (
 		<div className={s.overlay}>
@@ -16,7 +16,7 @@ export const LevelUpModal = () => {
 				<strong>Parabéns!</strong>
 				<p>Você alcançou um novo level.</p>
 
-				<button type="button">
+				<button type="button" onClick={closeModalLevelUp}>
 					<Close />
 				</button>
 			</div>
