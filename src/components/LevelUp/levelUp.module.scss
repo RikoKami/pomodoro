@@ -1,0 +1,56 @@
+@import "../../styles/variables.scss";
+
+.overlay {
+	background-color: rgb(19 19 19 / 80%);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.modal {
+	position: relative;
+	background-color: nth($blue, 5);
+	width: 100%;
+	max-width: 400px;
+	padding: 2rem 3rem;
+	border-radius: 5px;
+	box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+	text-align: center;
+	header {
+		font-weight: 600;
+		color: nth($neutral, 3);
+		background: url("/icons/levelup.svg") no-repeat center;
+		background-size: 200px;
+		span {
+			font-size: 9rem;
+		}
+	}
+
+	strong {
+		font-size: 2.25rem;
+		color: nth($neutral, 1);
+	}
+
+	p {
+		font-size: 1.25rem;
+		color: nth($neutral, 1);
+		margin-top: 0.25rem;
+	}
+
+	button {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		background: transparent;
+		border: 0;
+		font-size: 0;
+		padding: 0.5rem;
+	}
+}
