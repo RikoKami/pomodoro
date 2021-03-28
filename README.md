@@ -2,7 +2,9 @@
 
 Application based on the [Pomodoro](https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro) technique, aimed at developers that assists in the care of your health and posture.
 
-System developed based on the knowledge acquired during a week of the <nlw/>#04 event by Rocketseat, on the ReactJS trail taught by the famous “Fala Dev” Diego Fernandes.
+#### 💻 Preview application
+
+[![Deploy with Vercel](https://vercel.com/button)](https://pomodoro-swart.vercel.app/)
 
 ## Getting Started
 
