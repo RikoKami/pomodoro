@@ -17,19 +17,36 @@
 .modal {
 	position: relative;
 	background-color: nth($blue, 5);
-	width: 100%;
-	max-width: 400px;
-	padding: 2rem 3rem;
+	min-width: 400px;
+	padding: 2rem 5rem;
 	border-radius: 5px;
 	box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
 	text-align: center;
 	header {
 		font-weight: 600;
 		color: nth($neutral, 3);
-		background: url("/icons/levelup.svg") no-repeat center;
 		background-size: 200px;
 		span {
+			position: relative;
 			font-size: 9rem;
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				width: 90px;
+				height: 100%;
+				background: url("/icons/levelup.svg") no-repeat;
+				background-position: left;
+				background-size: contain;
+			}
+			&:before {
+				left: -70px;
+			}
+			&:after {
+				right: -70px;
+				transform: scaleX(-1);
+			}
 		}
 	}
 
